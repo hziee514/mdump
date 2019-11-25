@@ -1,0 +1,7 @@
+.vs
+Backup
+Debug
+Release
+*.filters
+*.user
+UpgradeLog.htm
