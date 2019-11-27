@@ -15,7 +15,7 @@ extern "C"
 {
 #endif
 
-//void WINAPI setup(const LPCSTR dmpFile);
+void WINAPI setup(const LPCSTR dmpFile);
 
 #ifdef __cplusplus
 }

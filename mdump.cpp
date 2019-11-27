@@ -12,12 +12,12 @@ typedef BOOL (WINAPI *MINIDUMPWRITEDUMP)(HANDLE hProcess,
 
 TCHAR dmpName[MAX_PATH] = {0};
 
-LONG WINAPI ExceptionHandler(struct _EXCEPTION_POINTERS *pExceptionInfo);
+extern "C" LONG WINAPI ExceptionHandler(struct _EXCEPTION_POINTERS *pExceptionInfo);
 
-/*void WINAPI setup(const LPCSTR dmpFile)
+void WINAPI setup(const LPCSTR dmpFile)
 {
-
-}*/
+    _tcscpy(dmpName, dmpFile);
+}
 
 extern "C" BOOL APIENTRY DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
 {
@@ -39,7 +39,7 @@ extern "C" BOOL APIENTRY DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpv
     return TRUE;
 }
 
-LONG WINAPI ExceptionHandler(struct _EXCEPTION_POINTERS *pExceptionInfo)
+extern "C" LONG WINAPI ExceptionHandler(struct _EXCEPTION_POINTERS *pExceptionInfo)
 {
     LONG nRet = EXCEPTION_CONTINUE_SEARCH;
     HMODULE hDbgHlp = ::LoadLibrary("dbghelp.dll");
