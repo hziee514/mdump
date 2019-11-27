@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1574823151 source:e:\workspace\github\mdump\mdump.cpp
+	"mdump.h"
+	<dbghelp.h>
+	<tchar.h>
+
+1574822621 e:\workspace\github\mdump\mdump.h
+	<windows.h>
+
