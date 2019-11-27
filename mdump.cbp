@@ -11,8 +11,6 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="3" />
 				<Option compiler="gnu_gcc_compilerx64" />
-				<Option createDefFile="1" />
-				<Option createStaticLib="1" />
 				<Compiler>
 					<Add option="-Wall" />
 					<Add option="-DBUILD_DLL" />
@@ -27,8 +25,6 @@
 				<Option object_output="obj/Release/" />
 				<Option type="3" />
 				<Option compiler="gnu_gcc_compilerx64" />
-				<Option createDefFile="1" />
-				<Option createStaticLib="1" />
 				<Compiler>
 					<Add option="-Wall" />
 					<Add option="-DBUILD_DLL" />
@@ -40,8 +36,11 @@
 				</Linker>
 			</Target>
 		</Build>
-		<Unit filename="main.cpp" />
-		<Unit filename="main.h" />
+		<Unit filename=".gitignore" />
+		<Unit filename="LICENSE" />
+		<Unit filename="README.md" />
+		<Unit filename="mdump.cpp" />
+		<Unit filename="mdump.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
